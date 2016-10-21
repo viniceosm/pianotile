@@ -14,7 +14,3 @@ body{
 .float-left{float: left;}
 .preto{background-color:black;}
 .branco{background-color:white;}
-
-@media screen and (max-width:900px){
-
-}
