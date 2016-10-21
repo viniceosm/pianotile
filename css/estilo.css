@@ -3,20 +3,6 @@ body{
 	margin:0;
 }
 #cel{
-  width:240px;
-  margin:auto;
-}
-.bloco{
-  width:70px;
-  height:70px;
-  margin: 1px;
-}
-.float-left{float: left;}
-.preto{background-color:black;}
-.branco{background-color:white;}
-
-@media screen and (max-width:900px){
-#cel{
   width:100%;
   height:100vh;
 }
@@ -25,4 +11,10 @@ body{
   height:24vh;
   margin: 1px;
 }
+.float-left{float: left;}
+.preto{background-color:black;}
+.branco{background-color:white;}
+
+@media screen and (max-width:900px){
+
 }
