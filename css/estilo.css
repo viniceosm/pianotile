@@ -1,0 +1,13 @@
+body{background-color:gray;}
+#cel{
+  width:240px;
+  margin:auto;
+}
+.bloco{
+  width:70px;
+  height:70px;
+  margin: 1px;
+}
+.float-left{float: left;}
+.preto{background-color:black;}
+.branco{background-color:white;}
