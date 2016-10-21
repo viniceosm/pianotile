@@ -15,7 +15,7 @@ body{
 .preto{background-color:black;}
 .branco{background-color:white;}
 
-@media screen and (max-width:800px){
+@media screen and (max-width:900px){
 #cel{
   width:100%;
   height:100vh;
