@@ -1,4 +1,7 @@
-body{background-color:gray;}
+body{
+	background-color:gray;
+	margin:0;
+}
 #cel{
   width:240px;
   margin:auto;
@@ -11,3 +14,15 @@ body{background-color:gray;}
 .float-left{float: left;}
 .preto{background-color:black;}
 .branco{background-color:white;}
+
+@media screen and (max-width:800px){
+#cel{
+  width:100%;
+  height:100vh;
+}
+.bloco{
+  width:31%;
+  height:24vh;
+  margin: 1px;
+}
+}
