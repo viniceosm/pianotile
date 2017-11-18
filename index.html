@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>PianoTile</title>
+
+	<meta charset="utf-8">
 	<script type="text/javascript" src="js/funcao.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<meta name="viewport" content="width=999, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
+	<!-- <meta name="viewport" content="width=999, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no">
 
 </head>
 <body>
-	<div id="cel">
-	<div id="00" class="bloco branco float-left"></div>
-	<div id="01" class="bloco branco float-left"></div>
-	<div id="02" class="bloco branco float-left"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col col-xs-12 col-sm-7 col-sm-offset-3 col-md-5">
+				<div id="cel">
+					<div id="00" class="bloco branco float-left"></div>
+					<div id="01" class="bloco branco float-left"></div>
+					<div id="02" class="bloco branco float-left"></div>
 
-	<div id="10" class="bloco branco float-left"></div>
-	<div id="11" class="bloco branco float-left"></div>
-	<div id="12" class="bloco branco float-left"></div>
+					<div id="10" class="bloco branco float-left"></div>
+					<div id="11" class="bloco branco float-left"></div>
+					<div id="12" class="bloco branco float-left"></div>
 
-	<div id="20" class="bloco branco float-left"></div>
-	<div id="21" class="bloco branco float-left"></div>
-	<div id="22" class="bloco branco float-left"></div>
+					<div id="20" class="bloco branco float-left"></div>
+					<div id="21" class="bloco branco float-left"></div>
+					<div id="22" class="bloco branco float-left"></div>
 
-	<div id="30" class="bloco branco float-left" onclick='proximo("30")'></div>
-	<div id="31" class="bloco branco float-left" onclick='proximo("31");'></div>
-	<div id="32" class="bloco branco float-left" onclick='proximo("32");'></div>
+					<div id="30" class="bloco branco float-left" onclick='proximo("30")'></div>
+					<div id="31" class="bloco branco float-left" onclick='proximo("31");'></div>
+					<div id="32" class="bloco branco float-left" onclick='proximo("32");'></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
