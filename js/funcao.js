@@ -1,63 +1,68 @@
-var sequencia=[];
-window.onload = function (){
+var sequencia = [];
 
+const KEY_A = 65;
+const KEY_S = 83;
+const KEY_D = 68;
+
+window.onload = function (){
 	for(var i=0;i<4;i++)
 		sequencia.push(randomizarNumero(0,2));
 
 	recarregaTela();
-	// proximo("30");
 
-	document.body.onkeyup=function(){
-		var key = event.which || event.keyCode;
-		var acertou = false;
+	document.body.onkeyup = proximoTecla;
 
-		//A 65, S 83, D 68
-		if (key==65 || key==83 || key==68){
-			if(key==65 && sequencia[3]==0){
-				acertou = true;
-			}else
-			if(key==83 && sequencia[3]==1){
-				acertou = true;
-			}else
-			if(key==68 && sequencia[3]==2){
-				acertou = true;
-			}
+	adicionaEventoBlocos();
+}
 
-			if(acertou){
-				sequencia[3] = sequencia[2];
-				sequencia[2] = sequencia[1];
-				sequencia[1] = sequencia[0];
-				sequencia[0] = randomizarNumero(0,2);
-			}else{
-				alert("Perdeu");
-			}
-			recarregaTela();
-		}
+function adicionaEventoBlocos(){
+	for (var id of ['30', '31', '32']) {
+		document.getElementById(id).addEventListener('click', function (e) {
+			proximo(e.target.id);
+		});
 	}
+}
+function proximoTecla(){
+	var key = event.which || event.keyCode;
 
-	
+	if (verificaTeclasValidas(key)) {
+		acertou = verificaTeclasSequencia(key);
+
+		verificaAcertou(acertou);
+		recarregaTela();
+	}
 }
 function proximo(idBloco){
-	var acertou = false;
-	if(idBloco=="30" && sequencia[3]==0){
-		acertou = true;
-	}else
-	if(idBloco=="31" && sequencia[3]==1){
-		acertou = true;
-	}else
-	if(idBloco=="32" && sequencia[3]==2){
-		acertou = true;
-	}
-	
-	if(acertou){
-		sequencia[3] = sequencia[2];
-		sequencia[2] = sequencia[1];
-		sequencia[1] = sequencia[0];
-		sequencia[0] = randomizarNumero(0,2);
-	}else{
+	acertou = verificaBlocosSequencia(idBloco);
+
+	verificaAcertou(acertou);
+	recarregaTela();
+}
+function verificaTeclasValidas(key){
+	return (key == KEY_A || key == KEY_S || key == KEY_D);
+}
+function verificaTeclasSequencia(key) {
+	return (key == KEY_A && sequencia[3] == 0) ||
+		(key == KEY_S && sequencia[3] == 1) ||
+		(key == KEY_D && sequencia[3] == 2);
+}
+function verificaBlocosSequencia(idBloco){
+	return (idBloco == "30" && sequencia[3] == 0) ||
+			(idBloco == "31" && sequencia[3] == 1) ||
+			(idBloco == "32" && sequencia[3] == 2);
+}
+function verificaAcertou(acertou){
+	if (acertou) {
+		arrumaSequencia();
+	} else {
 		alert("Perdeu");
 	}
-	recarregaTela();
+}
+function arrumaSequencia(){
+	sequencia[3] = sequencia[2];
+	sequencia[2] = sequencia[1];
+	sequencia[1] = sequencia[0];
+	sequencia[0] = randomizarNumero(0, 2);
 }
 function recarregaTela(){
 	acertou = false;
