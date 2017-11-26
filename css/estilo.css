@@ -1,7 +1,7 @@
 body{
 	background-color:gray;
   margin:0;
-  font-family: 'Tahoma';
+  font-family: 'monospace', 'tahoma';
 }
 #cel{
   width:100%;
@@ -16,10 +16,20 @@ body{
 #pontuacao{
   width: 100%;
   text-align: center;
-  color: #b42727;
+
+  /*texto gradiente*/
+  background: -webkit-linear-gradient(#e26517, #b42727);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
   font-size: 40px;
   font-weight: 600;
   position: absolute;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .float-left{float: left;}
 .preto{background-color:black;}
