@@ -11,6 +11,8 @@
 	const KEY_S = 83;
 	const KEY_D = 68;
 
+	const somBloco = ['audio/f1s.ogg', 'audio/g1.ogg', 'audio/g1s.ogg'];
+
 	window.onload = function (){
 		for(var i=0;i<4;i++)
 			sequencia.push(randomizarNumero(0,2));
@@ -60,6 +62,7 @@
 	}
 	function verificaAcertou(acertou){
 		if (acertou) {
+			tocarSom(somBloco[sequencia[3]]);
 			ponto++;
 			mostraPonto();
 			arrumaSequencia();
@@ -126,6 +129,10 @@
 				addClass(eBloco, 'branco');
 			}
 		}
+	}
+	function tocarSom(som){
+		var audio = new Audio(som);
+		audio.play();
 	}
 	function randomizarNumero(min, max){
 		return Math.floor(Math.random() * ((max+1) - min)) + min;
