@@ -48,12 +48,18 @@ body{
   height: 100%;
   background:#FFFFFF; 
   text-align: center;
+  position: relative;
 }
 
 .btn-dereg{
   background: -webkit-linear-gradient(#e26517, #b42727);
   border: 0;
   color: white;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #btnJogar{
@@ -71,4 +77,10 @@ body{
   right: 0;
   width: 100px;
   height: 50px;
+}
+
+.bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
