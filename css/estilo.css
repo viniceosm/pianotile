@@ -13,18 +13,22 @@ body{
   margin: 1px;
   float: left;
 }
-#pontuacao{
-  width: 100%;
-  text-align: center;
-
-  /*texto gradiente*/
+.texto-gradiente{
   background: -webkit-linear-gradient(#e26517, #b42727);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.xan{
+  font-size: 30px;
+  font-weight: 600;
+}
+#pontuacao{
+  position: absolute;
+  width: 100%;
+  text-align: center;
   
   font-size: 40px;
   font-weight: 600;
-  position: absolute;
 
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -32,6 +36,39 @@ body{
   user-select: none;
 }
 .float-left{float: left;}
-.preto{background-color:black;}
+.preto{
+  background-color:black;
+  background: -webkit-linear-gradient(40deg,#313131,#000000)!important;
+  background: linear-gradient(40  deg,#313131,#000000)!important;
+}
 .branco{background-color:white;}
 .roxo{background-color:#680045;}
+
+#menu, #pontuacaoMenu{
+  height: 100%;
+  background:#FFFFFF; 
+  text-align: center;
+}
+
+.btn-dereg{
+  background: -webkit-linear-gradient(#e26517, #b42727);
+  border: 0;
+  color: white;
+}
+
+#btnJogar{
+  position: absolute;
+  padding: 10px 20px;
+}
+#btnJogarDnv{
+  padding: 7px 20px;
+}
+#btnJogar, #btnJogarDnv{
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 50px;
+}

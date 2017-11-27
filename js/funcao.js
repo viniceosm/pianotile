@@ -22,6 +22,21 @@
 		document.body.onkeyup = proximoTecla;
 
 		adicionaEventoBlocos();
+		
+		$('#jogo').hide();
+		$('#pontuacaoMenu').hide();
+		$('#btnJogar').focus();
+
+		$('#btnJogar').click(function(e){
+			$('#menu').hide();
+			$('#pontuacaoMenu').hide();
+			$('#jogo').show();
+		});
+		$('#btnJogarDnv').click(function(e){
+			$('#menu').hide();
+			$('#pontuacaoMenu').hide();
+			$('#jogo').show();
+		});
 	}
 
 	function adicionaEventoBlocos(){
@@ -68,9 +83,15 @@
 			arrumaSequencia();
 		} else {
 			gravaMelhorPontuacao();
-			alert("Perdeu!!" +
-			"\n\nSua pontuação: " + ponto + 
-			"\n\n\Melhor pontuação: " + localStorage.melhorPonto);
+
+			$('#jogo').hide();
+			$('#menu').hide();
+			$('#pontuacaoMenu').show();
+			$('#btnJogarDnv').focus();
+
+			$('#ponto').html(ponto);
+			$('#melhorPontuacao').html(localStorage.melhorPonto);
+
 			blocoTudoBranco();
 			ponto = 0;
 			mostraPonto();
